@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #020509;
+  color: #e6f1f7;
+  font-family: "Inter Variable", Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sliders fins, cohérents avec l'accent cyan */
+input[type="range"] {
+  @apply h-0.5 cursor-pointer appearance-none rounded-full bg-slate-700;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-3 w-3 appearance-none rounded-full bg-cyan-300;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply h-3 w-3 rounded-full border-0 bg-cyan-300;
+}
+
+button:disabled {
+  @apply cursor-not-allowed opacity-40;
+}
